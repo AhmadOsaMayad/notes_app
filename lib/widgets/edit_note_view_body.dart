@@ -104,7 +104,10 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text("Unsaved Changes"),
+          title: const Text(
+            "Unsaved Changes",
+            style: TextStyle(color: kPrimaryColor),
+          ),
           content: const Text(
             "Changes will be lost if you exit. What would you like to do?",
           ),
@@ -114,20 +117,38 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                 _handleSaveNote();
                 Navigator.pop(context, true);
               },
-              child: const Text("Save & Close"),
+              child: const Text(
+                "Save & Close",
+                style: TextStyle(
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             TextButton(
               onPressed: () {
                 _resetNoteChanges();
                 Navigator.of(context).popUntil((route) => route.isFirst);
               },
-              child: const Text("Close Anyway"),
+              child: const Text(
+                "Close Anyway",
+                style: TextStyle(
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             TextButton(
               onPressed: () {
                 Navigator.pop(context, false);
               },
-              child: const Text("Stay"),
+              child: const Text(
+                "Stay",
+                style: TextStyle(
+                  color: kPrimaryColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         );

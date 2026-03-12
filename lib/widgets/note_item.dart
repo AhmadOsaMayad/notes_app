@@ -82,10 +82,6 @@ class NoteItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8.0),
       child: IconButton(
         onPressed: () => _showDeleteConfirmationDialog(context),
-        /* () {
-          note.delete();
-          BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-        }, */
         icon: const Icon(FontAwesomeIcons.trash, size: 26, color: Colors.black),
       ),
     );
