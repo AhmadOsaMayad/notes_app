@@ -2,8 +2,8 @@
 
 A sleek, offline-first Flutter notes application for capturing ideas quickly, organizing them with colors, and editing them with a smooth, minimal UI.
 
-![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter)
-![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)
+![Flutter](https://img.shields.io/badge/Flutter-SDK-02569B?logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-SDK-0175C2?logo=dart)
 ![State Management](https://img.shields.io/badge/State_Management-BLoC%2FCubit-6C2DC7)
 ![Storage](https://img.shields.io/badge/Storage-Hive-F4B400)
 
@@ -95,11 +95,11 @@ flutter pub run build_runner build --delete-conflicting-outputs
 ## 💾 Data Layer
 
 - Notes are stored locally in Hive box: `notes_box`
-- `NoteModel` includes:
-  - `title` (note title)
-  - `subtitle` (note body/content; internal field name in the current model)
-  - `date`
-  - `color`
+- `NoteModel` stores:
+  - note title (`title`)
+  - note body/content text (currently persisted as `subtitle` in the model)
+  - note date (`date`)
+  - note color (`color`)
   - Arabic language flags for title/content direction handling
 
 ---
