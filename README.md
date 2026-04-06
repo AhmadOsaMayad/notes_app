@@ -4,7 +4,7 @@ A sleek, offline-first Flutter notes application for capturing ideas quickly, or
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter)
 ![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)
-![State%20Management](https://img.shields.io/badge/State%20Management-BLoC%2FCubit-6C2DC7)
+![State Management](https://img.shields.io/badge/State_Management-BLoC%2FCubit-6C2DC7)
 ![Storage](https://img.shields.io/badge/Storage-Hive-F4B400)
 
 ---
@@ -96,8 +96,8 @@ flutter pub run build_runner build --delete-conflicting-outputs
 
 - Notes are stored locally in Hive box: `notes_box`
 - `NoteModel` includes:
-  - `title`
-  - `subtitle`
+  - `title` (note title)
+  - `subtitle` (note body/content; internal field name in the current model)
   - `date`
   - `color`
   - Arabic language flags for title/content direction handling
