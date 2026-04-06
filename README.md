@@ -97,7 +97,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 - Notes are stored locally in Hive box: `notes_box`
 - `NoteModel` stores:
   - note title (`title`)
-  - note body/content text (currently persisted as `subtitle` in the model)
+  - note body/content text (currently persisted as `subtitle` in the model for legacy compatibility from the initial implementation)
   - note date (`date`)
   - note color (`color`)
   - Arabic language flags for title/content direction handling
